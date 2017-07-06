@@ -1,0 +1,28 @@
+{
+  "name": "cordova-plugin-mlenabled",
+  "version": "1.0.0",
+  "description": "Check whether mock locations are enabled on the device or not.\r\n  ",
+  "cordova": {
+    "id": "cordova-plugin-mlenabled",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlueMessaging/cordova-plugin-mlenabled.git"
+  },
+  "keywords": [
+    "Mock locations",
+    "Fake location",
+    "Fake GPS",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "OscaiitoBM",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/BlueMessaging/cordova-plugin-mlenabled/issues"
+  },
+  "homepage": "https://github.com/BlueMessaging/cordova-plugin-mlenabled#readme"
+}
