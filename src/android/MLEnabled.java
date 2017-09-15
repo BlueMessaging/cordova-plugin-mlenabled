@@ -39,7 +39,7 @@ public class MLEnabled extends CordovaPlugin {
             if (sdk_int < android.os.Build.VERSION_CODES.KITKAT) {
                 String prov = Settings.Secure.getString(this.cordova.getActivity().getContentResolver(), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
                 locationOff = TextUtils.isEmpty(prov);
-                msj += "\nLOCATION_PROVIDERS_ALLOWED=empty";
+                msj += "\nLOCATION_PROVIDERS_ALLOWED=" + prov;
             }
             else {
                 int modeResult = Settings.Secure.getInt(this.cordova.getActivity().getContentResolver(), Settings.Secure.LOCATION_MODE);

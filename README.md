@@ -52,12 +52,19 @@ Returns wheter the location is beign spoofed or not, and information on the veri
 ```js
 var s = function(r){console.debug(r);};
 CLE.check(s);
-//The result r is an string wich contains true(if the location is from a mock provider or if theres an missmatch
-// of locations), false otherwise and information about all of the providers tha have been checked
-
-"true:
-
-Provider= passive
+//The result r is an string as:
+// value:msj 
+// where value can be:
+//     true  -> if the location is from a mock provider 
+//     false -> if the location is not from a mock provider, although this does not guarantee that the location obtained is real, since it can be a 'persistent' record of an emulator
+//     off   -> if the location is turned off
+//     nolocation ->  if for every location provider, Android has no location. This situation  could be exploited by a mock location  application, thus this option should be used carefully. 
+// and msj is information about the execution of the plugin. Contains the API LEVEL and some information about of the location (if there is one).
+ 
+"false:
+API_LEVEL=23
+LOCATION_MODE=3
+Provider= passive
 accuracy= 2
 requireNetwork= false
 reqquireSatelite= false
@@ -66,9 +73,8 @@ supportBearing= false
 supportSpeed= false
 isEnabled= true
 IsFromMockProvider= false
-latitude= 19.4307244 longitude= -99.2017063
-
-Provider= network
+latitude= 19.4307222 longitude= -99.2017496
+Provider= network
 accuracy= 2
 requireNetwork= false
 reqquireSatelite= false
@@ -77,17 +83,55 @@ supportBearing= true
 supportSpeed= true
 isEnabled= true
 IsFromMockProvider= false
-latitude= 19.4307244 longitude= -99.2017063
-
-Provider= gps
-accuracy= 1
+latitude= 19.4307222 longitude= -99.2017496
+Provider= network
+accuracy= 2
 requireNetwork= false
 reqquireSatelite= false
-supportAltitude= false
-supportBearing= false
-supportSpeed= false
+supportAltitude= true
+supportBearing= true
+supportSpeed= true
 isEnabled= true
-IsFromMockProvider= true
-latitude= 43.826265854876794 longitude= -101.84293650090693
+IsFromMockProvider= false
+latitude= 19.4307222 longitude= -99.2017496
+Provider= network
+accuracy= 2
+requireNetwork= false
+reqquireSatelite= false
+supportAltitude= true
+supportBearing= true
+supportSpeed= true
+isEnabled= true
+IsFromMockProvider= false
+latitude= 19.4307222 longitude= -99.2017496
+Provider= network
+accuracy= 2
+requireNetwork= false
+reqquireSatelite= false
+supportAltitude= true
+supportBearing= true
+supportSpeed= true
+isEnabled= true
+IsFromMockProvider= false
+latitude= 19.4307222 longitude= -99.2017496
+Provider= gps
+accuracy= 1
+requireNetwork= true
+reqquireSatelite= true
+supportAltitude= true
+supportBearing= true
+supportSpeed= true
+isEnabled= true
+No location
+Provider= network
+accuracy= 2
+requireNetwork= false
+reqquireSatelite= false
+supportAltitude= true
+supportBearing= true
+supportSpeed= true
+isEnabled= true
+IsFromMockProvider= false
+latitude= 19.4307222 longitude= -99.2017496
 "
 ```
